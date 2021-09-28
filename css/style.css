@@ -1,0 +1,55 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+div#crypto {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+}
+
+div#market {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color: red;
+}
+
+div#click {
+    position: relative;
+}
+
+div#upgradeMenu {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: -32%;
+}
+
+div#upgradeMenuButton {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    background-color: rgb(86, 95, 86);
+    color: lightgreen;
+    font-family: consolas;
+    text-align: center;
+    font-size: 300%;
+    user-select: none;
+    cursor: pointer;
+}
+
+div#upgradeMenuButton:hover, div#upgradeMenuButton:active {
+    background-color: rgb(59, 66, 59);
+}
+
+div#upgradeMenuDropdown {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    background-color: rgb(73, 82, 73);
+}
