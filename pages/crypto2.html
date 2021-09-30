@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Crypto Clicker</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/crypto2.js"></script>
 </head>
 <body>
     <div class="container">
         <div id="crypto">
             <div id="click">
                 <img src="../img/noun_coin_4020418.svg" alt="coin" id="coinIcon">
+                <span id="counter">0</span>
+                <br>
+                <button id="saveButton">Save</button>
+                <button id="loadButton">Load</button> 
             </div>
             <div id="upgradeMenu">
                 <div id="upgradeMenuButton">
@@ -31,6 +33,7 @@
     </div>
 </body>
 <footer>
-    
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="../js/crypto2.js"></script>
 </footer>
 </html>
