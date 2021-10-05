@@ -27,6 +27,9 @@ $('document').ready(() => {
             alert("insufficient currency");
         }
         $("#counter").text(count);
+        var upLoc = "#costSpeed" + (upNum+1);
+        console.log(upLoc);
+        $(upLoc).text(costs[upNum]);
     }
 
     const purchaseSpeed = (upNum) => {
@@ -39,6 +42,9 @@ $('document').ready(() => {
             alert("insufficient currency");
         }
         $("#counter").text(count);
+        var upLoc = "#costSpeed" + (upNum+1);
+        console.log(upLoc);
+        $(upLoc).text(costs[upNum]);
     }
 
 
