@@ -1,0 +1,59 @@
+body {
+    user-select: none;
+}
+
+.container {
+    margin-top: 1%;
+    background-color: gray;
+    text-align: center;
+}
+
+div#landing {
+    height: 125px;
+}
+
+h2 {
+    padding: 2%;
+}
+
+.form-group {
+    padding: 2%;
+}
+
+.register {
+    display: none;
+}
+
+.landing {
+    display: none;
+}
+
+@media only screen and (min-height: 230px) {
+    div#landing {
+        height: 170px;
+    }
+}
+
+@media only screen and (min-height: 425px) {
+    div#landing {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-height: 750px) {
+    div#landing {
+        height: 700px;
+    }
+}
+
+@media only screen and (min-height: 830px) {
+    div#landing {
+        height: 760px;
+    }
+}
+
+@media only screen and (min-height: 1100px) {
+    div#landing {
+        height: 1000px;
+    }
+}
