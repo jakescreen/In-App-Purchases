@@ -5,7 +5,7 @@ $('document').ready(() => {
         (btm==='0px')?closeMenu():openMenu();        
     });
 
-    let costs = [10,100,100,200, 1000,100,200,400,800,1200];
+    let costs = [10,100,200,400, 1000,100,200,400,800,1200];
     let speedUp = [2,10,50,100,200,1,2,5,7,10];
 
     let count = +($("#counter").text()); // initial count value
@@ -57,9 +57,33 @@ $('document').ready(() => {
     $("#rig1").click(function(){
        purchaseUpgrade(0);
     });
+    $("#rig2").click(function(){
+        purchaseUpgrade(1);
+     });
+     $("#rig3").click(function(){
+        purchaseUpgrade(2);
+     });
+     $("#rig4").click(function(){
+        purchaseUpgrade(3);
+     });
+     $("#rig5").click(function(){
+        purchaseUpgrade(4);
+     });
 
     $("#speed1").click(function(){
         purchaseSpeed(5);
+     });
+     $("#speed2").click(function(){
+        purchaseSpeed(6);
+     });
+     $("#speed3").click(function(){
+        purchaseSpeed(7);
+     });
+     $("#speed4").click(function(){
+        purchaseSpeed(8);
+     });
+     $("#speed5").click(function(){
+        purchaseSpeed(9);
      });
 
 
@@ -96,6 +120,3 @@ const openMenu = () => {
     });
 }
 
-const purchaseUpgrade = () => {
-    
-}

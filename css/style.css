@@ -2,6 +2,7 @@ body {
     margin: 0%;
     padding: 0%;
     overflow: hidden;
+    padding-top: 70px;
 }
 
 div#crypto {
@@ -9,6 +10,16 @@ div#crypto {
     width: 50%;
     height: 100%;
     left: 0;
+}
+
+#rigUpgrades{
+    display: flex;
+}
+#speedUpgrades{
+    display: flex;
+}
+.upgrade{
+    flex: 1;
 }
 
 div#market {
