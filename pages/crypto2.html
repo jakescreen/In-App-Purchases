@@ -7,10 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="../js/crypto2.js"></script>
     <title>Crypto Clicker</title>
 </head>
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Crypto Clicker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./landing.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./crypto2.html" id="clickerLink">Clicker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./invest.html" id="investLink">Invest</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://mattm401.github.io/">CISC 474</a>
+                    <a class="dropdown-item" href="about.html">The Dream Team</a>
+                    <a class="dropdown-item" href="#">Tools We Used</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div id="crypto">
             <div id="click">
@@ -34,6 +64,34 @@
                             <br>
                             <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig1">
                         </div>
+                        <div id="upgrade2" class="upgrade">
+                            <div>upgrade 2</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed2">100</span>
+                            <br>
+                            <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig2">
+                        </div>
+                        <div id="upgrade3" class="upgrade">
+                            <div>upgrade 3</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed3">200</span>
+                            <br>
+                            <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig3">
+                        </div>
+                        <div id="upgrade4" class="upgrade">
+                            <div>upgrade 4</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed4">400</span>
+                            <br>
+                            <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig4">
+                        </div>
+                        <div id="upgrade5" class="upgrade">
+                            <div>upgrade 5</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed5">1000</span>
+                            <br>
+                            <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig5">
+                        </div>
                     </div>
                     <div id="speedUpgrades">
                         <div id="speed1" class="upgrade">
@@ -43,6 +101,35 @@
                             <br>
                             <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed1">
                         </div>
+                        <div id="speed2" class="upgrade">
+                            <div>speed 2</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed7" class="upgradeCost">200</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed2">
+                        </div>
+                        <div id="speed3" class="upgrade">
+                            <div>speed 3</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed8" class="upgradeCost">400</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed3">
+                        </div>
+                        <div id="speed4" class="upgrade">
+                            <div>speed 4</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed9" class="upgradeCost">800</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed4">
+                        </div>
+                        <div id="speed5" class="upgrade">
+                            <div>speed 5</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed10" class="upgradeCost">1200</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed5">
+                        </div>
+
                     </div>
                 </div>
             </div>
