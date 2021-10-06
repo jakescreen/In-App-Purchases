@@ -5,8 +5,8 @@ $('document').ready(() => {
     username = localStorage.getItem('username');
     password = localStorage.getItem('password');
     if(username && password) {
-        $('#clickerLink').remove('disabled');
-        $('#investLink').remove('disabled');
+        $('#clickerLink').removeClass('disabled');
+        $('#investLink').removeClass('disabled');
         $('.landing').show();
     } else {
         $('.register').show();
@@ -32,7 +32,9 @@ $('document').ready(() => {
 
 const register = (email, p1, p2) => {
     if(!validate(email, p1, p2)) {
-        window.location = `clicker.html?${email.substring(0, email.indexOf('@'))}`;
+        window.location = `crypto3.html?${email.substring(0, email.indexOf('@'))}`;
+        localStorage.setItem('username', email.substring(0, email.indexOf('@')));
+        localStorage.setItem('password', p2);
     }
 };
 
