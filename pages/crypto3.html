@@ -44,21 +44,20 @@
         <div class="col-auto login">
             <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="inputEmail1">Email address</label>
                   <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <p class="alert alert-danger" id="emailAlert" style="display: none;"></p>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="inputPassword1">Password</label>
                   <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                  <p class="alert alert-danger" id="passAlert" style="display: none;"></p>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Confirm Password</label>
+                  <label for="inputPassword2">Confirm Password</label>
                   <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
-                </div>
-                <div id="tos" class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="serviceCheck">
-                  <label class="form-check-label" for="serviceCheck">I agree to the <a>Terms of Service</a></label>
+                  <p class="alert alert-danger" id="passAlert2" style="display: none;"></p>
                 </div>
                 <button id="submitLogin" type="button" class="btn btn-light">Register</button>
             </form>
