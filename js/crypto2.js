@@ -102,7 +102,7 @@ $('document').ready(() => {
 
 const closeMenu = () => {
     $('#upgradeMenu').animate({
-        bottom: '-32%'
+        bottom: '-27%'
     });
     $('#click').animate({
         width: '100%',
