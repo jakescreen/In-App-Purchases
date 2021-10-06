@@ -38,8 +38,8 @@
     <br>
     <div class="container navbar-light bg-light" id="landing">
         <div class="row-auto">
-            <h2 class="register">Register</h2>
-            <h2 class="landing">Welcome to Crypto Clicker!</h2>
+            <h2 style="display: none;" id="registerHeader">Register for Crypto Clicker</h2>
+            <h2 style="display: none;" id="landingHeader">Welcome to Crypto Clicker!</h2>
         </div>
         <div class="col-auto login">
             <form>
@@ -54,7 +54,7 @@
                   <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
                   <p class="alert alert-danger" id="passAlert" style="display: none;"></p>
                 </div>
-                <div class="form-group">
+                <div id="pass2" class="form-group">
                   <label for="inputPassword2">Confirm Password</label>
                   <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
                   <p class="alert alert-danger" id="passAlert2" style="display: none;"></p>
@@ -63,13 +63,13 @@
             </form>
         </div>
         <div class="col-auto" style="padding: 3%">
-            <a class="alert" href="#">Already Have An Account?</a>
+            <a id="signInLink" href="#">Already Have An Account?</a>
         </div>
     </div>
 </body>
 <footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../js/crypto3.js"></script>
+    <script src="../js/landing.js"></script>
 </footer>
 </html>

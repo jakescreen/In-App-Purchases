@@ -1,21 +1,17 @@
-console.log(window.location.search);
+let reg = true;
+let username = localStorage.getItem('username');
+let password = localStorage.getItem('password');
 
 $('document').ready(() => {
-
-    username = localStorage.getItem('username');
-    password = localStorage.getItem('password');
-    if(username && password) {
-        $('#clickerLink').removeClass('disabled');
-        $('#investLink').removeClass('disabled');
-        $('.landing').show();
-    } else {
-        $('.register').show();
-    }
     $('#submitLogin').on('click', ()=>{
-        if(document.getElementById('submitLogin').innerHTML=='Register') {
-            register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
-        }
+        register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
     });
+    if(username!=null && password!=null) {
+        $('#landingHeader').show();
+        switchToLogin();
+    } else {
+        $('#registerHeader').show();
+    }
     $('#inputPassword1').on('keyup', () => {
         $('#passAlert').slideUp();
         $('#passAlert2').slideUp();
@@ -27,14 +23,16 @@ $('document').ready(() => {
     $('#inputEmail').on('keyup', () => {
         $('#emailAlert').slideUp();
     });
-
+    $('#signInLink').on('click', () => {
+        switchToLogin();
+    });
 });
 
 const register = (email, p1, p2) => {
     if(!validate(email, p1, p2)) {
-        window.location = `crypto3.html?${email.substring(0, email.indexOf('@'))}`;
-        localStorage.setItem('username', email.substring(0, email.indexOf('@')));
+        localStorage.setItem('username', email);
         localStorage.setItem('password', p2);
+        addNavButtonFunc();
     }
 };
 
@@ -83,7 +81,39 @@ const emailAlert = (alert) => {
     $('#emailAlert').slideDown();
 }
 
-const submitLogin = (e) => {
-    const key = e.which;
-    if(key==13) $('#submitLogin').click();
+const switchToLogin = () => {
+    $('#pass2').slideToggle();
+    $('#passAlert').slideUp();
+    reg=!reg;
+    if(reg) {
+        $('#submitLogin').html('Register');
+        $('#signInLink').html('Already Have An Account?');
+        $('#submitLogin').off();
+        $('#submitLogin').on('click', () => {
+            console.log('b');
+            register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
+        });
+    } else {
+        $('#submitLogin').html('Login');
+        $('#signInLink').html('Need To Make An Account?');
+        $('#submitLogin').off();
+        $('#submitLogin').on('click', () => {
+            login($('#inputEmail').val(), $('#inputPassword1').val());
+        });
+    }
 };
+
+const login = (email, pass) => {
+    if(username === email && pass == password) {
+        $('#register').hide();
+        $('#landing').show();
+        addNavButtonFunc();
+    } else {
+        emailAlert('Incorrect Email or Password, Please Try Again');
+    }
+};
+
+const addNavButtonFunc = () => {
+    $('#clickerLink').removeClass('disabled');
+    $('#investLink').removeClass('disabled');
+}
