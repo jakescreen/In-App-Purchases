@@ -2,7 +2,7 @@ $('document').ready(() => {
 
     $('#upgradeMenuButton').on('click', () => {
         const btm = $('#upgradeMenu').css('bottom');
-        (btm==='0px')?closeMenu():openMenu();        
+        (btm==='0px')?closeMenu():openMenu();
     });
 
     let costs = [10,100,200,400, 1000,100,200,400,800,1200];
@@ -11,8 +11,9 @@ $('document').ready(() => {
     let count = +($("#counter").text()); // initial count value
     let delta = 1; // initial change in count per click
     let rate = 0;
-    
+
     $("#coinIcon").click(function(){
+        playAudio2('coin_click')
         count = count + delta;
         $("#counter").text(count);
     });
@@ -59,31 +60,40 @@ $('document').ready(() => {
        purchaseUpgrade(0);
     });
     $("#rig2").click(function(){
+        playAudio2('pick_upgrade');
         purchaseUpgrade(1);
      });
      $("#rig3").click(function(){
+         playAudio2('pick_upgrade');
         purchaseUpgrade(2);
      });
      $("#rig4").click(function(){
+         playAudio2('pick_upgrade');
         purchaseUpgrade(3);
      });
      $("#rig5").click(function(){
+         playAudio2('pick_upgrade');
         purchaseUpgrade(4);
      });
 
     $("#speed1").click(function(){
+        playAudio2('gpu_upgrade');
         purchaseSpeed(5);
      });
      $("#speed2").click(function(){
+         playAudio2('gpu_upgrade');
         purchaseSpeed(6);
      });
      $("#speed3").click(function(){
+         playAudio2('gpu_upgrade');
         purchaseSpeed(7);
      });
      $("#speed4").click(function(){
+         playAudio2('gpu_upgrade');
         purchaseSpeed(8);
      });
      $("#speed5").click(function(){
+         playAudio2('gpu_upgrade');
         purchaseSpeed(9);
      });
 
@@ -121,7 +131,7 @@ const openMenu = () => {
     });
 }
 
-function playAudio(url){ //straightforward audio playing function for button objects
+function playAudio(url){ //deprecated
     new Audio(url).play();
 }
 
