@@ -55,6 +55,7 @@ $('document').ready(() => {
     },500);
 
     $("#rig1").click(function(){
+        playAudio2('pick_upgrade');
        purchaseUpgrade(0);
     });
     $("#rig2").click(function(){
@@ -122,5 +123,10 @@ const openMenu = () => {
 
 function playAudio(url){ //straightforward audio playing function for button objects
     new Audio(url).play();
+}
+
+function playAudio2(id){
+    var x = document.getElementById(id);
+    x.play();
 }
 
