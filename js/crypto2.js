@@ -1,10 +1,5 @@
 $('document').ready(() => {
 
-    $('#upgradeMenuButton').on('click', () => {
-        const btm = $('#upgradeMenu').css('bottom');
-        (btm==='0px')?closeMenu():openMenu();
-    });
-
     let costs = [10,100,200,400, 1000,100,200,400,800,1200];
     let speedUp = [2,10,50,100,200,1,2,5,7,10];
 
@@ -15,7 +10,7 @@ $('document').ready(() => {
     $("#coinIcon").click(function(){
         playAudio2('coin_click')
         count = count + delta;
-        $("#counter").text(count);
+        $("#counter").text(`coins: ${count}`);
     });
 
     const purchaseUpgrade = (upNum) => {
@@ -27,7 +22,7 @@ $('document').ready(() => {
         else{
             alert("insufficient currency");
         }
-        $("#counter").text(count);
+        $("#counter").text(`coins: ${count}`);
         var upLoc = "#costSpeed" + (upNum+1);
         console.log(upLoc);
         $(upLoc).text(costs[upNum]);
@@ -42,7 +37,7 @@ $('document').ready(() => {
         else{
             alert("insufficient currency");
         }
-        $("#counter").text(count);
+        $("#counter").text(`coins: ${count}`);
         var upLoc = "#costSpeed" + (upNum+1);
         console.log(upLoc);
         $(upLoc).text(costs[upNum]);
@@ -52,26 +47,26 @@ $('document').ready(() => {
 
     setInterval(function(){
         count = count + rate;
-        $("#counter").text(count);
+        $("#counter").text(`coins: ${count}`);
     },500);
 
-    $("#rig1").click(function(){
+    $("#upgrade1").click(function(){
         playAudio2('pick_upgrade');
        purchaseUpgrade(0);
     });
-    $("#rig2").click(function(){
+    $("#upgrade2").click(function(){
         playAudio2('pick_upgrade');
         purchaseUpgrade(1);
      });
-     $("#rig3").click(function(){
+     $("#upgrade3").click(function(){
          playAudio2('pick_upgrade');
         purchaseUpgrade(2);
      });
-     $("#rig4").click(function(){
+     $("#upgrade4").click(function(){
          playAudio2('pick_upgrade');
         purchaseUpgrade(3);
      });
-     $("#rig5").click(function(){
+     $("#upgrade5").click(function(){
          playAudio2('pick_upgrade');
         purchaseUpgrade(4);
      });
@@ -106,30 +101,10 @@ $('document').ready(() => {
     $("#loadButton").click(function(){
         count = +(localStorage.getItem('Count'));
         delta = +(localStorage.getItem('Delta'));
-        $("#counter").text(count);
+        $("#counter").text(`coins: ${count}`);
     });
 
 });
-
-const closeMenu = () => {
-    $('#upgradeMenu').animate({
-        bottom: '-27%'
-    });
-    $('#click').animate({
-        width: '100%',
-        left: '0%'
-    });
-}
-
-const openMenu = () => {
-    $('#upgradeMenu').animate({
-        bottom: '0%'
-    });
-    $('#click').animate({
-        width: '65%',
-        left: '20%'
-    });
-}
 
 function playAudio(url){ //deprecated
     new Audio(url).play();

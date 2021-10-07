@@ -42,102 +42,98 @@
         </div>
     </nav>
     <div style="text-align: center;" class="container navbar-light bg-light" id="landing">
-        <div class="col">
-            <div id="click">
-                <img src="../img/noun_coin_4020418.svg" alt="coin" id="coinIcon" width="400" height="400" >
-                <span id="counter">0</span>
+        <div class="row">
+            <div class="col col-md-6" id="click">
+                <button class="btn btn-light" style="margin-top: 15%;"><img src="../img/noun_coin_4020418.svg" alt="coin" id="coinIcon" width="400" height="400" ></button>
+            </div>
+            <div class="col col-md-6">
+                <span style="font-size:300%; font-family: impact;" id="counter">0</span>
                 <br>
-                <button id="saveButton">Save</button>
-                <button id="loadButton">Load</button>
-            </div>
-
-        </div>
-
-    </div>
-    <div id="upgradeMenu">
-        <br>
-        <div id="upgradeMenuButton">
-            Upgrades
-        </div>
-        <div id="upgradeMenuDropdown">
-            <audio src="../sfx/Pick_upgrade.wav" id='pick_upgrade'></audio>
-            <audio src="../sfx/GPU_upgrade.wav" id='gpu_upgrade'></audio>
-            <audio src="../sfx/Coin_proto_1.wav" id='coin_click'></audio>
-            <div id=rigUpgrades>
-                <div id="upgrade1" class="upgrade">
-
-                    <div>upgrade 1</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed1">10</span>
-                    <br>
-                    <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig1" >
+                <button style="font-size:200%;" id="saveButton">Save</button>
+                <button style="font-size:200%;" id="loadButton">Load</button>
+                <div class="container" style="text-align: center;">
+                    <audio src="../sfx/Pick_upgrade.wav" id='pick_upgrade'></audio>
+                    <audio src="../sfx/GPU_upgrade.wav" id='gpu_upgrade'></audio>
+                    <audio src="../sfx/Coin_proto_1.wav" id='coin_click'></audio>
+                    <div class="row">
+                        <button id="upgrade1" class="btn btn-light">
+                                <div>upgrade 1</div>
+                                <span class="upgradeIcon">cost: </span>
+                                <span id="costSpeed1">10</span>
+                                <br>
+                                <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig1" >
+                        </button>
+                        <button id="upgrade2" class="btn btn-light">
+                                <div>upgrade 2</div>
+                                <span class="upgradeIcon">cost: </span>
+                                <span id="costSpeed2">100</span>
+                                <br>
+                                <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig2" >
+                        </button>
+                        <button id="upgrade3" class="btn btn-light">
+                                <div>upgrade 3</div>
+                                <span class="upgradeIcon">cost: </span>
+                                <span id="costSpeed3">200</span>
+                                <br>
+                                <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig3" >
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button id="upgrade4" class="btn btn-light">
+                                <div>upgrade 4</div>
+                                <span class="upgradeIcon">cost: </span>
+                                <span id="costSpeed4">400</span>
+                                <br>
+                                <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig4" >
+                        </button>
+                        <button id="upgrade5" class="btn btn-light">
+                                <div>upgrade 5</div>
+                                <span class="upgradeIcon">cost: </span>
+                                <span id="costSpeed5">1000</span>
+                                <br>
+                                <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig5" >
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button id="speed1" class="btn btn-light">
+                            <div>speed 1</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed6" class="upgradeCost">100</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed1" >
+                        </button>
+                        <button id="speed2" class="btn btn-light">
+                            <div>speed 2</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed7" class="upgradeCost">200</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed2" >
+                        </button>
+                        <button id="speed3" class="btn btn-light">
+                            <div>speed 3</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed8" class="upgradeCost">400</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed3" >
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button id="speed4" class="btn btn-light">
+                            <div>speed 4</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed9" class="upgradeCost">800</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed4" >
+                        </button>
+                        <button id="speed5" class="btn btn-light">
+                            <div>speed 5</div>
+                            <span class="upgradeIcon">cost: </span>
+                            <span id="costSpeed10" class="upgradeCost">1200</span>
+                            <br>
+                            <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed5" >
+                        </button>
+                    </div>
                 </div>
-                <div id="upgrade2" class="upgrade">
-                    <div>upgrade 2</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed2">100</span>
-                    <br>
-                    <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig2" >
-                </div>
-                <div id="upgrade3" class="upgrade">
-                    <div>upgrade 3</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed3">200</span>
-                    <br>
-                    <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig3" >
-                </div>
-                <div id="upgrade4" class="upgrade">
-                    <div>upgrade 4</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed4">400</span>
-                    <br>
-                    <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig4" >
-                </div>
-                <div id="upgrade5" class="upgrade">
-                    <div>upgrade 5</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed5">1000</span>
-                    <br>
-                    <img src="../img/noun_Pickaxe_3059983.svg" alt="pickaxe" height="60" width="60" id="rig5" >
-                </div>
-            </div>
-            <div id="speedUpgrades">
-                <div id="speed1" class="upgrade">
-                    <div>speed 1</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed6" class="upgradeCost">100</span>
-                    <br>
-                    <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed1" >
-                </div>
-                <div id="speed2" class="upgrade">
-                    <div>speed 2</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed7" class="upgradeCost">200</span>
-                    <br>
-                    <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed2" >
-                </div>
-                <div id="speed3" class="upgrade">
-                    <div>speed 3</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed8" class="upgradeCost">400</span>
-                    <br>
-                    <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed3" >
-                </div>
-                <div id="speed4" class="upgrade">
-                    <div>speed 4</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed9" class="upgradeCost">800</span>
-                    <br>
-                    <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed4" >
-                </div>
-                <div id="speed5" class="upgrade">
-                    <div>speed 5</div>
-                    <span class="upgradeIcon">cost: </span>
-                    <span id="costSpeed10" class="upgradeCost">1200</span>
-                    <br>
-                    <img src="../img/noun_gpu_1132936.svg" alt="fan1" height="60" width="60" id="speed5" >
-                </div>
-
             </div>
         </div>
     </div>
