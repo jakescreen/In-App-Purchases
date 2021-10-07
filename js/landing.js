@@ -4,7 +4,7 @@ let password = localStorage.getItem('password');
 
 $('document').ready(() => {
     $('#submitLogin').on('click', ()=>{
-        register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
+        register($('#inputEmail1').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
     });
     if(username!=null && password!=null) {
         switchToLogin();
@@ -17,7 +17,7 @@ $('document').ready(() => {
         $('#passAlert').slideUp();
         $('#passAlert2').slideUp();
     });
-    $('#inputEmail').on('keyup', () => {
+    $('#inputEmail1').on('keyup', () => {
         $('#emailAlert').slideUp();
     });
     $('#signInLink').on('click', () => {
@@ -92,14 +92,14 @@ const switchToLogin = () => {
         $('#submitLogin').off();
         $('#submitLogin').on('click', () => {
             console.log('b');
-            register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
+            register($('#inputEmail1').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
         });
     } else {
         $('#submitLogin').html('Login');
         $('#signInLink').html('Need To Make An Account?');
         $('#submitLogin').off();
         $('#submitLogin').on('click', () => {
-            login($('#inputEmail').val(), $('#inputPassword1').val());
+            login($('#inputEmail1').val(), $('#inputPassword1').val());
         });
     }
 };
@@ -111,6 +111,9 @@ const login = (email, pass) => {
         addNavButtonFunc();
         loggedIn();
     } else {
+        console.log('aaaaa');
+        console.log(username, email);
+        console.log(pass, password);
         emailAlert('Incorrect Email or Password, Please Try Again');
     }
 };
