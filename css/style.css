@@ -38,7 +38,7 @@ div#upgradeMenu {
     position: absolute;
     width: 100%;
     height: 40%;
-    bottom: -27%;
+    bottom: -30%;
 }
 
 div#upgradeMenuButton {
@@ -63,4 +63,17 @@ div#upgradeMenuDropdown {
     height: 80%;
     width: 100%;
     background-color: rgb(73, 82, 73);
+}
+.container {
+    margin-top: 1%;
+    background-color: gray;
+    text-align: center;
+}
+
+h2 {
+    padding: 2%;
+}
+
+.landing {
+    display: none;
 }
