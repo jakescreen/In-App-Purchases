@@ -120,3 +120,7 @@ const openMenu = () => {
     });
 }
 
+function playAudio(url){ //straightforward audio playing function for button objects
+    new Audio(url).play();
+}
+
