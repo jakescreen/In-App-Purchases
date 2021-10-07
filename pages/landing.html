@@ -3,7 +3,7 @@
     <title>Crypto Clicker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/crypto3.css">
+    <link rel="stylesheet" href="../css/landing.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,15 +38,13 @@
     <br>
     <div class="container navbar-light bg-light" id="landing">
         <div class="row-auto">
-            <h2 style="display: none;" id="registerHeader">Register for Crypto Clicker</h2>
-            <h2 style="display: none;" id="landingHeader">Welcome to Crypto Clicker!</h2>
+            <h2 id="landingHeader">Welcome to Crypto Clicker!</h2>
         </div>
-        <div class="col-auto login">
+        <div style="padding-bottom: 2%;" class="col-auto login" id="loginPage">
             <form>
                 <div class="form-group">
                   <label for="inputEmail1">Email address</label>
                   <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   <p class="alert alert-danger" id="emailAlert" style="display: none;"></p>
                 </div>
                 <div class="form-group">
@@ -60,10 +58,12 @@
                   <p class="alert alert-danger" id="passAlert2" style="display: none;"></p>
                 </div>
                 <button id="submitLogin" type="button" class="btn btn-light">Register</button>
+                <button id="signInLink" type="button" class="btn btn-light">Already Have An Account?</button>
             </form>
         </div>
-        <div class="col-auto" style="padding: 3%">
-            <a id="signInLink" href="#">Already Have An Account?</a>
+        <div id="getStarted" class="col-auto" style="display: none;">
+            <h3>Get Started:</h3>
+            <button style="margin-bottom: 2%;" type="button" class="btn btn-primary btn-lg" id="cryptoAltButton">Crypto Clicker</button>
         </div>
     </div>
 </body>

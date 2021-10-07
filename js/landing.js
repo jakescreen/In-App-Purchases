@@ -7,10 +7,7 @@ $('document').ready(() => {
         register($('#inputEmail').val(), $('#inputPassword1').val(), $('#inputPassword2').val());
     });
     if(username!=null && password!=null) {
-        $('#landingHeader').show();
         switchToLogin();
-    } else {
-        $('#registerHeader').show();
     }
     $('#inputPassword1').on('keyup', () => {
         $('#passAlert').slideUp();
@@ -26,6 +23,9 @@ $('document').ready(() => {
     $('#signInLink').on('click', () => {
         switchToLogin();
     });
+    $('#cryptoAltButton').on('click', () => {
+        window.location = './crypto2.html';
+    });
 });
 
 const register = (email, p1, p2) => {
@@ -33,6 +33,7 @@ const register = (email, p1, p2) => {
         localStorage.setItem('username', email);
         localStorage.setItem('password', p2);
         addNavButtonFunc();
+        loggedIn();
     }
 };
 
@@ -108,6 +109,7 @@ const login = (email, pass) => {
         $('#register').hide();
         $('#landing').show();
         addNavButtonFunc();
+        loggedIn();
     } else {
         emailAlert('Incorrect Email or Password, Please Try Again');
     }
@@ -116,4 +118,9 @@ const login = (email, pass) => {
 const addNavButtonFunc = () => {
     $('#clickerLink').removeClass('disabled');
     $('#investLink').removeClass('disabled');
+}
+
+const loggedIn = () => {
+    $('#loginPage').slideUp();
+    $('#getStarted').slideDown();
 }
